@@ -12,5 +12,9 @@ console.log(allCaps('foo bar'))
 function capitalizeWords(str) {
     return str.split(' ').map(capitalize).join(' ')
 }
-console.log(capitalizeWords('Do All The Things'))
+console.log(capitalizeWords('do all the things'))
 
+function removeExtraSpaces(str) {
+    return str.trim(str).split(/\s+/).join(' ')
+}
+console.log(removeExtraSpaces("   Hello    world!   "))
