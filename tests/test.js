@@ -38,6 +38,33 @@ test('Kebob', () => {
 })
 
 
+test('Snake', () => {
+    expect(lib.snakeCase('hello world')).toBe('hello_world')
+    expect(lib.snakeCase('1234')).toBe('1234')
+    expect(lib.snakeCase('hello_world')).toBe('hello_world')
+})
+
+
+test('Camel Case', () => {
+    expect(lib.camelCase('hello world')).toBe('helloWorld')
+    expect(lib.camelCase('1234')).toBe('1234')
+    expect(lib.camelCase('camel_case')).toBe('camel_case')
+})
+
+
+test('Shift', () => {
+    expect(lib.shift('hello world', 4)).toBe('o worldhell')
+    expect(lib.shift('1234',2)).toBe('3412')
+    expect(lib.shift('hello_world',3)).toBe('lo_worldhel')
+})
+
+test('Empty', () => {
+    expect(lib.empty('hello world')).toBe(false)
+    expect(lib.empty(' ')).toBe(true)
+    expect(lib.empty('hello_world')).toBe(false)
+})
+
+
 
 
 
