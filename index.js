@@ -20,19 +20,24 @@ function removeExtraSpaces(str) {
 // console.log(removeExtraSpaces("   Hello    world!   "))
 // 5
 function kebobCase(string, separator) {
+  if (separator === undefined) { separator = '-'; }
   const lower = string.toLowerCase();
   const char = lower.split('');
-  const filter = char.filter((charater) => {
-    const code = charater.charCodeAt(0);
-    if (code > 96 && code < 123) {
-      return true;
-    } if (code > 47 && code < 58) {
-      return true;
-    } if (code === 32 || code === separator.charCodeAt(0)) {
-      return true;
-    }
-    return false;
-  });
+  const filter = char.filter(function (charater) {
+      const code = charater.charCodeAt(0);
+        if (code > 96 && code < 123) {
+            return true;
+        }
+        else if (code > 47 && code < 58) {
+            return true;
+        }
+        else if (code === 32 || code === separator.charCodeAt(0)) {
+            return true;
+        }
+        return false;
+    });
+    var noSpace = removeExtraSpaces(filter.join(''));
+    return noSpace.split(' ').join(separator);
   const noSpace = removeExtraSpaces(filter.join(''));
   return noSpace.split(' ').join(separator);
 }
