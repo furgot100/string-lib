@@ -1,5 +1,6 @@
 ## Badges:
 ![example workflow](https://github.com/furgot100/string-lib/actions/workflows/node.js.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/furgot100/string-lib/badge.svg?branch=main)](https://coveralls.io/github/furgot100/string-lib?branch=main)
 
 # Javascript String Library
 A Library that lets you change strings
